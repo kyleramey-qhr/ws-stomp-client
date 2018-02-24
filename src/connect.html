@@ -1,0 +1,16 @@
+<div class="card" *ngIf="!connectionService.connected">
+    <div class="card-header">
+        Connect
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="wsStompUrl">WS-Stomp URL</label>
+            <input #wsStompUrl type="url" class="form-control" id="wsStompUrl" placeholder="URL" value="wss://bones.local.qhrtech.com/signaling/ws">
+        </div>
+        <div class="form-group">
+            <label for="wsAuthHeader">Authentication Header</label>
+            <input #wsAuthHeader type="text" class="form-control" id="wsAuthHeader" placeholder="Bearer Token">
+        </div>
+        <button (click)="connectStomp(wsStompUrl.value, wsAuthHeader.value)" class="btn btn-primary">Connect</button>
+    </div>
+</div>

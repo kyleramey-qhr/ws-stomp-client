@@ -1,0 +1,39 @@
+<div *ngIf="connectionService.connected">
+    <ul class="nav nav-tabs" id="manageTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="send-tab" data-toggle="tab" href="#send" role="tab" aria-controls="send"
+               aria-selected="true">Send</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="subscribe-tab" data-toggle="tab" href="#subscribe" role="tab" aria-controls="subscribe"
+               aria-selected="false">Subscribe</a>
+        </li>
+    </ul>
+
+
+    <div class="tab-content" id="manageTabsContent">
+
+        <div class="tab-pane fade show active" id="send" role="tabpanel" aria-labelledby="send-tab">
+            <div class="form-group">
+                <label for="sendPath">Path</label>
+                <input #sendPath type="text" class="form-control" id="sendPath" placeholder="Path">
+            </div>
+            <div class="form-group">
+                <label for="sendBody">Body</label>
+                <textarea #sendBody class="form-control" id="sendBody" rows="3"></textarea>
+            </div>
+            <button (click)="send(sendPath.value, sendBody.value)" class="btn btn-primary">Send</button>
+        </div>
+
+
+        <div class="tab-pane fade" id="subscribe" role="tabpanel" aria-labelledby="subscribe-tab">
+            <div class="form-group">
+                <label for="subscribePath">Path</label>
+                <input #subscribePath type="text" class="form-control" id="subscribePath" placeholder="Path">
+            </div>
+            <button (click)="subscribe(subscribePath.value)" class="btn btn-primary">Subscribe</button>
+        </div>
+
+    </div>
+
+</div>

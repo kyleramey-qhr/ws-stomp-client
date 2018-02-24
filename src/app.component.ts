@@ -1,25 +1,27 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Component, OnInit } from '@angular/core';
+///<reference path="../node_modules/@angular/core/src/linker/view_container_ref.d.ts"/>
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {Component} from '@angular/core';
+import {ConnectionService} from './connection.service';
+import {ConnectComponent} from './connect.component';
+import {MonitorComponent} from './monitor.component';
+import {ManageComponent} from './manage.component';
+
+
 
 @Component({
-  selector: 'App',
-  template:
-  `<div>
-    <h2>Welcome to {{name}} Angular2!</h2>
-  </div>`
+    selector: 'App',
+    templateUrl: './app.html'
 })
-export class AppComponent implements OnInit {
-  public readonly name = 'electron-forge';
-
-  ngOnInit(): void {
-    console.log('component initialized');
-  }
+export class AppComponent {
+    public readonly name = 'electron-forge';
 }
 
 @NgModule({
-  imports: [BrowserModule],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent]
+    imports: [BrowserModule],
+    providers: [ConnectionService],
+    declarations: [AppComponent, ConnectComponent, MonitorComponent, ManageComponent],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
