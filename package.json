@@ -1,8 +1,8 @@
 {
   "name": "ws-stomp-client-angular",
   "productName": "WS-Stomp Client",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "0.0.1",
+  "description": "WS-Stomp testing client.",
   "main": "src/index.ts",
   "scripts": {
     "start": "electron-forge start",
