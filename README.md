@@ -1,2 +1,12 @@
-# ws-stomp-client
-A client for testing ws-stomp communication.
+# WS-Stomp Testing CLient
+
+An electron app implementing the client portion of ws-stomp for
+testing servers.
+
+# Quick Start - Development Mode
+
+1. Install Node and Yarn
+1. Checkout project.
+2. Run `yarn install`.
+1. Run `yarn start` to start the app in development mode.
+1. Enter your bearer token (if any) and Web Socket URL and press connect.
