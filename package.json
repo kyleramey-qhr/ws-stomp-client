@@ -1,8 +1,8 @@
 {
   "name": "ws-stomp-client-angular",
-  "productName": "WS-Stomp Client",
+  "productName": "ws-stomp-client",
   "version": "0.0.1",
-  "description": "WS-Stomp testing client.",
+  "description": "WS-Stomp Testing Client",
   "main": "src/index.ts",
   "scripts": {
     "start": "electron-forge start",
@@ -24,10 +24,11 @@
           "zip"
         ],
         "linux": [
-          "rpm"
+          "zip"
         ]
       },
       "electronPackagerConfig": {
+        "ignore": [".idea"],
         "packageManager": "yarn"
       },
       "electronWinstallerConfig": {
