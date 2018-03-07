@@ -19,3 +19,9 @@ _Linux Only Currently_
 1. Run `yarn start` to start the app in development mode.
 1. Enter your bearer token (if any) and Web Socket URL and press connect.
 
+# Quick Start - Windows
+1. Install Node and Yarn.
+2. Run `npm install --global windows-build-tools` from Powershell as Administrator.
+3. Run `yarn install`.
+4. Run `yarn start` to start the app in development mode.
+5. Enter your bearer token (if any) and Web Socket URL and press connect.
